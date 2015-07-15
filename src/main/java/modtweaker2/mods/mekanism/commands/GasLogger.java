@@ -1,4 +1,4 @@
-package modtweaker2.mods.mekanism.gas;
+package modtweaker2.mods.mekanism.commands;
 
 import java.util.Collections;
 import java.util.Comparator;
@@ -28,7 +28,7 @@ public class GasLogger implements ICommandFunction {
         Collections.sort(gases, COMPARATOR);
         for (Gas gas : gases) {
             System.out.println("Gas " + gas.getName());
-            MineTweakerAPI.logCommand("<" + gas.getName() + "> -- " + gas.getLocalizedName());
+            MineTweakerAPI.logCommand("<gas:" + gas.getName() + "> -- " + gas.getLocalizedName());
         }
 
         if (player != null) {
