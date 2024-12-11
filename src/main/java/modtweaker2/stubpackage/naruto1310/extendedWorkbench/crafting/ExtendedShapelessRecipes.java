@@ -1,10 +1,10 @@
-package naruto1310.extendedWorkbench.crafting;
-
-import java.util.List;
+package modtweaker2.stubpackage.naruto1310.extendedWorkbench.crafting;
 
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+
+import java.util.List;
 
 public class ExtendedShapelessRecipes implements IExtendedRecipe {
 

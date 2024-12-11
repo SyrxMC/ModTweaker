@@ -2,7 +2,7 @@ package modtweaker2.mods.chisel.commands;
 
 import java.util.List;
 
-import com.cricketcraft.chisel.api.carving.CarvingUtils;
+import team.chisel.api.carving.CarvingUtils;
 
 import minetweaker.MineTweakerAPI;
 import minetweaker.MineTweakerImplementationAPI;

@@ -7,9 +7,9 @@ import java.util.Map.Entry;
 
 import net.minecraft.item.Item;
 
-import com.cricketcraft.chisel.api.carving.CarvingUtils;
-import com.cricketcraft.chisel.api.carving.ICarvingGroup;
-import com.cricketcraft.chisel.api.carving.ICarvingVariation;
+import team.chisel.api.carving.CarvingUtils;
+import team.chisel.api.carving.ICarvingGroup;
+import team.chisel.api.carving.ICarvingVariation;
 
 import minetweaker.MineTweakerAPI;
 import minetweaker.MineTweakerImplementationAPI;

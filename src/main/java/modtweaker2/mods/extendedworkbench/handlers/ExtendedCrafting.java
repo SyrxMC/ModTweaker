@@ -15,10 +15,10 @@ import minetweaker.api.item.IItemStack;
 import modtweaker2.helpers.LogHelper;
 import modtweaker2.utils.BaseCraftingAddition;
 import modtweaker2.utils.BaseCraftingRemoval;
-import naruto1310.extendedWorkbench.crafting.ExtendedCraftingManager;
-import naruto1310.extendedWorkbench.crafting.ExtendedShapedRecipes;
-import naruto1310.extendedWorkbench.crafting.ExtendedShapelessRecipes;
-import naruto1310.extendedWorkbench.crafting.IExtendedRecipe;
+import modtweaker2.stubpackage.naruto1310.extendedWorkbench.crafting.ExtendedCraftingManager;
+import modtweaker2.stubpackage.naruto1310.extendedWorkbench.crafting.ExtendedShapedRecipes;
+import modtweaker2.stubpackage.naruto1310.extendedWorkbench.crafting.ExtendedShapelessRecipes;
+import modtweaker2.stubpackage.naruto1310.extendedWorkbench.crafting.IExtendedRecipe;
 import stanhebben.zenscript.annotations.ZenClass;
 import stanhebben.zenscript.annotations.ZenMethod;
 
