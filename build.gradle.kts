@@ -1,14 +1,14 @@
 plugins {
-    id("fpgradle-minecraft") version("0.8.3")
+    id("fpgradle-minecraft") version ("0.8.3")
 }
 
 group = "modtweaker2"
 
 minecraft_fp {
     mod {
-        modid   = "modtweaker2"   //REQUIRED
-        name    = "Mod Tweaker 2"  //REQUIRED
-        rootPkg = "$group" //REQUIRED
+        modid = "modtweaker2"
+        name = "Mod Tweaker 2"
+        rootPkg = "$group"
     }
 
     core {
@@ -22,9 +22,9 @@ minecraft_fp {
     publish {
         changelog = "https://github.com/GTMEGA/ModTweaker/releases/tag/${version}"
         maven {
-            repoUrl  = "https://mvn.falsepattern.com/gtmega_releases"
+            repoUrl = "https://mvn.falsepattern.com/gtmega_releases"
             repoName = "mega"
-            group    = "mega"      //Convention
+            group = "mega"
         }
     }
 }
