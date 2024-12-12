@@ -59,7 +59,7 @@ repositories {
 }
 
 dependencies {
-    api("mega:crafttweaker-mc1.7.10:3.3.2-mega:dev")
+    api("mega:crafttweaker-mc1.7.10:3.5.0:dev")
 
     compileOnly("mega:forestry-mc1.7.10:4.5.3-mega:dev") { excludeDeps() }
     compileOnly("team.chisel:chisel-mc1.7.10:2.15.1-mega:api") { excludeDeps() }
