@@ -69,7 +69,7 @@ public class ModTweaker2 {
         TweakerPlugin.register("exnihilo", ExNihilo.class);
         TweakerPlugin.register("extendedWorkbench", ExtendedWorkbench.class);
         TweakerPlugin.register("factorization", Factorization.class);
-        TweakerPlugin.register("Mariculture", Mariculture.class);
+//        TweakerPlugin.register("Mariculture", Mariculture.class);
         TweakerPlugin.register("Mekanism", Mekanism.class);
         TweakerPlugin.register("Metallurgy", Metallurgy.class);
         TweakerPlugin.register("PneumaticCraft", PneumaticCraft.class);
