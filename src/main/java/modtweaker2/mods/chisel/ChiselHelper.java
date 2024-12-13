@@ -10,9 +10,9 @@ import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 
 import org.jetbrains.annotations.NotNull;
-import team.chisel.api.carving.CarvingUtils;
-import team.chisel.api.carving.ICarvingGroup;
-import team.chisel.api.carving.ICarvingVariation;
+import com.cricketcraft.chisel.api.carving.CarvingUtils;
+import com.cricketcraft.chisel.api.carving.ICarvingGroup;
+import com.cricketcraft.chisel.api.carving.ICarvingVariation;
 import com.google.common.collect.Lists;
 
 import minetweaker.api.item.IItemStack;
@@ -81,11 +81,6 @@ public class ChiselHelper {
         @Override
         public int getItemMeta() {
             return meta;
-        }
-
-        @Override
-        public @NotNull ItemStack getStack() {
-            return new ItemStack(block);
         }
 
         @Override

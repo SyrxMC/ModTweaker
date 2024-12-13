@@ -1,8 +1,8 @@
 package modtweaker2.mods.chisel.handlers;
 
-import team.chisel.api.carving.CarvingUtils;
-import team.chisel.api.carving.ICarvingGroup;
-import team.chisel.api.carving.ICarvingVariation;
+import com.cricketcraft.chisel.api.carving.CarvingUtils;
+import com.cricketcraft.chisel.api.carving.ICarvingGroup;
+import com.cricketcraft.chisel.api.carving.ICarvingVariation;
 
 import minetweaker.IUndoableAction;
 import minetweaker.MineTweakerAPI;

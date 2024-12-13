@@ -62,7 +62,7 @@ dependencies {
     api("mega:crafttweaker-mc1.7.10:3.5.0:dev")
 
     compileOnly("mega:forestry-mc1.7.10:4.5.3-mega:dev") { excludeDeps() }
-    compileOnly("team.chisel:chisel-mc1.7.10:2.15.1-mega:api") { excludeDeps() }
+    compileOnly("curse.maven:chisel-235279:2287442") { excludeDeps() }
     compileOnly("curse.maven:thaumcraft-223628:2227552") { excludeDeps() }
     compileOnly("com.github.GTNewHorizons:Applied-Energistics-2-Unofficial:rv3-beta-400-GTNH:dev") { excludeDeps() }
     compileOnly("com.github.GTNewHorizons:Botania:1.11.0-GTNH:dev") { excludeDeps() }
