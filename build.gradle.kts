@@ -59,6 +59,7 @@ repositories {
 }
 
 dependencies {
+
     api("mega:crafttweaker-mc1.7.10:3.5.0:dev")
 
     compileOnly("mega:forestry-mc1.7.10:4.5.3-mega:dev") { excludeDeps() }
@@ -76,7 +77,11 @@ dependencies {
     compileOnly("exnihilo:Ex-Nihilo:1.38-53:deobf") { excludeDeps() }
     compileOnly("net.industrial-craft:industrialcraft-2:2.2.828-experimental:dev") { excludeDeps() }
     compileOnly("pneumaticCraft:PneumaticCraft-1.7.10:1.7.0-74:userdev") { excludeDeps() }
+
     compileOnly(deobf("mirror:AuraCascade:557"))
     compileOnly(deobf("mirror:Metallurgy-1.7.10:4.0.9.148"))
     compileOnly(deobf("mirror:Mariculture-Deluxe-1.7.10:1.3.0-6"))
+
+    implementation(deobf("curse.maven:actually-additions-228404:2274681"))// { excludeDeps() }
+
 }

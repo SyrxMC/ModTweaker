@@ -1,12 +1,5 @@
 package modtweaker2;
 
-import java.io.File;
-
-import net.minecraftforge.common.MinecraftForge;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -21,6 +14,7 @@ import minetweaker.MineTweakerImplementationAPI;
 import minetweaker.MineTweakerImplementationAPI.ReloadEvent;
 import minetweaker.runtime.providers.ScriptProviderDirectory;
 import minetweaker.util.IEventHandler;
+import modtweaker2.mods.actuallyadditions.ActuallyAdditions;
 import modtweaker2.mods.appeng.AppliedEnergistics;
 import modtweaker2.mods.auracascade.AuraCascade;
 import modtweaker2.mods.botania.Botania;
@@ -32,7 +26,6 @@ import modtweaker2.mods.extraUtils.ExtraUtils;
 import modtweaker2.mods.factorization.Factorization;
 import modtweaker2.mods.forestry.Forestry;
 import modtweaker2.mods.ic2c.IC2C;
-import modtweaker2.mods.mariculture.Mariculture;
 import modtweaker2.mods.mekanism.Mekanism;
 import modtweaker2.mods.metallurgy.Metallurgy;
 import modtweaker2.mods.pneumaticcraft.PneumaticCraft;
@@ -42,6 +35,11 @@ import modtweaker2.mods.thaumcraft.Thaumcraft;
 import modtweaker2.mods.thermalexpansion.ThermalExpansion;
 import modtweaker2.proxy.CommonProxy;
 import modtweaker2.utils.TweakerPlugin;
+import net.minecraftforge.common.MinecraftForge;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.io.File;
 
 @Mod(modid = ModProps.modid, version = ModProps.version, dependencies = ModProps.dependencies)
 public class ModTweaker2 {
@@ -82,6 +80,7 @@ public class ModTweaker2 {
         TweakerPlugin.register("aura", AuraCascade.class);
         TweakerPlugin.register("ExtraUtilities", ExtraUtils.class);
         TweakerPlugin.register("IC2", IC2C.class);
+        TweakerPlugin.register("ActuallyAdditions", ActuallyAdditions.class);
 
         if (FMLCommonHandler.instance().getSide() == Side.CLIENT) {
             MinecraftForge.EVENT_BUS.register(new ClientEvents());
