@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "minVersion": "0.8.5",
+  "package": "modtweaker2.mixin.mixins",
+  "plugin": "modtweaker2.mixin.plugin.MixinPlugin",
+  "refmap": "mixins.modtweaker2.refmap.json",
+  "target": "@env(DEFAULT)",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [],
+  "client": [],
+  "server": []
+}

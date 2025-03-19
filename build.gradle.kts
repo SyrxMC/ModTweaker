@@ -27,6 +27,13 @@ minecraft_fp {
             group = "mega"
         }
     }
+
+    mixin {
+        debug = true
+        pkg = "mixin.mixins"
+        pluginClass = "mixin.plugin.MixinPlugin"
+    }
+
 }
 
 configurations {
@@ -56,11 +63,17 @@ repositories {
         }
     }, "net.industrial-craft")
     exclusive(ivy("https://mvn.falsepattern.com/releases/mirror/", "[orgPath]/[artifact]-[revision].[ext]"), "mirror")
+    maven {
+        name = "mavenpatternReleases"
+        url = uri("https://mvn.falsepattern.com/releases")
+    }
 }
 
 dependencies {
 
     api("mega:crafttweaker-mc1.7.10:3.5.0:dev")
+
+    implementation("com.falsepattern:falsepatternlib-mc1.7.10:0.5.0")
 
     compileOnly("mega:forestry-mc1.7.10:4.5.3-mega:dev") { excludeDeps() }
     compileOnly("curse.maven:chisel-235279:2287442") { excludeDeps() }

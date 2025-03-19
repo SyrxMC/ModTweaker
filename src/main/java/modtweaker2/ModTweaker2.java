@@ -87,7 +87,6 @@ public class ModTweaker2 {
         }
 
         MineTweakerImplementationAPI.onReloadEvent(new IEventHandler<MineTweakerImplementationAPI.ReloadEvent>() {
-
             @Override
             public void handle(ReloadEvent event) {
                 proxy.registerCommands();
