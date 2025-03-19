@@ -23,7 +23,7 @@ import static modtweaker2.helpers.StackHelper.matches;
 @ZenClass("mods.actuallyadditions.BallOfFur")
 public class BallOfFur {
 
-    private static final String name = "BallOfFur Crusher";
+    private static final String name = "ActuallyAdditions BallOfFur";
 
     @ZenMethod
     public static void add(IItemStack returnItem, int chance) {
