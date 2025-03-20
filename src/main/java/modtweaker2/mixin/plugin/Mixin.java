@@ -16,6 +16,7 @@ public enum Mixin implements IMixin {
 
     ActuallyAdditionsTileEntityAtomicReconstructorMixin(Side.COMMON, require(TargetedMod.ActuallyAdditions), "actuallyadditions.TileEntityAtomicReconstructorMixin"),
     ActuallyAdditionsBlockAtomicReconstructorMixin(Side.COMMON, require(TargetedMod.ActuallyAdditions), "actuallyadditions.BlockAtomicReconstructorMixin"),
+    ActuallyAdditionsLensNoneRecipeHandlerMixin(Side.COMMON, require(TargetedMod.ActuallyAdditions), "actuallyadditions.LensNoneRecipeHandlerMixin"),
     ActuallyAdditionsRenderReconstructorLensMixin(Side.CLIENT, require(TargetedMod.ActuallyAdditions), "actuallyadditions.RenderReconstructorLensMixin");
 
     private final Side side;

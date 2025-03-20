@@ -1,5 +1,7 @@
 package modtweaker2.mods.actuallyadditions;
 
+import de.ellpeck.actuallyadditions.api.ActuallyAdditionsAPI;
+import de.ellpeck.actuallyadditions.api.recipe.LensNoneRecipe;
 import de.ellpeck.actuallyadditions.mod.util.ItemUtil;
 import modtweaker2.mods.actuallyadditions.helper.GenericLens;
 import modtweaker2.mods.actuallyadditions.helper.GenericLensRecipe;
@@ -11,19 +13,17 @@ import java.util.stream.Collectors;
 
 public class ActuallyAdditionsExtension {
 
-    public static final ArrayList<GenericLensRecipe> GenericLensReconstructRecipe = new ArrayList<>();
-
     public static ArrayList<GenericLensRecipe> getRecipesFor(ItemStack input, GenericLens genericLens) {
 
         ArrayList<GenericLensRecipe> possibleRecipes = new ArrayList<>();
 
-        List<GenericLensRecipe> recipes = GenericLensReconstructRecipe.stream().filter(
-                genericLensRecipe -> genericLensRecipe.getLens().getLens().equals(genericLens.getLens())
+        List<LensNoneRecipe> recipes = ActuallyAdditionsAPI.reconstructorLensNoneRecipes.stream().filter(el -> el instanceof GenericLensRecipe).filter(
+                genericLensRecipe -> ((GenericLensRecipe) genericLensRecipe).getLens().getItem().equals(genericLens.getItem())
         ).collect(Collectors.toList());
 
-        for (GenericLensRecipe recipe : recipes) {
+        for (LensNoneRecipe recipe : recipes) {
             if (ItemUtil.contains(recipe.getInputs(), input, true)) {
-                possibleRecipes.add(recipe);
+                possibleRecipes.add((GenericLensRecipe) recipe);
             }
         }
 
