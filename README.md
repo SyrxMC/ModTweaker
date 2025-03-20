@@ -5,6 +5,7 @@ ModTweaker is an addon for MineTweaker 3. Minetweaker lets you adjust recipes, r
 
 Supported Mods
 ----------
+- ActuallyAdditions _new_
 - Applied Energistics 2
 - Auracascade
 - Botania
