@@ -14,22 +14,21 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Mixin(value = TileEntityAtomicReconstructor.class, remap = false)
+@Mixin(value = TileEntityAtomicReconstructor.class)
 public abstract class TileEntityAtomicReconstructorMixin extends TileEntityInventoryBase {
 
     public TileEntityAtomicReconstructorMixin(int slots, String name) {
         super(slots, name);
     }
 
-    @Inject(method = "isItemValidForSlot(ILnet/minecraft/item/ItemStack;)Z", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "isItemValidForSlot(ILnet/minecraft/item/ItemStack;)Z", at = @At("HEAD"), cancellable = true, remap = false)
     public void isValid(int i, ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
-        System.out.println("IS VALID: " + stack);
         if (ActuallyAdditionsAPI.reconstructorLenses.stream().filter(el -> el instanceof GenericLens).anyMatch(el -> ((GenericLens) el).getItem().equals(stack.getItem()))) {
             cir.setReturnValue(true);
         }
     }
 
-    @Inject(method = "getCurrentLens", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "getCurrentLens", at = @At("HEAD"), cancellable = true, remap = false)
     public void getLens(CallbackInfoReturnable<Lens> cir) {
 
         if (this.slots[0] == null){
@@ -38,7 +37,6 @@ public abstract class TileEntityAtomicReconstructorMixin extends TileEntityInven
         }
 
         Item item = this.slots[0].getItem();
-        System.out.println(item);
 
         if (item instanceof ILensItem){
             cir.setReturnValue((((ILensItem) item).getLens()));
