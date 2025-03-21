@@ -73,7 +73,7 @@ dependencies {
 
     api("mega:crafttweaker-mc1.7.10:3.5.0:dev")
 
-    implementation("com.falsepattern:falsepatternlib-mc1.7.10:0.5.0")
+    implementation("com.falsepattern:falsepatternlib-mc1.7.10:1.5.9")
 
     compileOnly("mega:forestry-mc1.7.10:4.5.3-mega:dev") { excludeDeps() }
     compileOnly("curse.maven:chisel-235279:2287442") { excludeDeps() }
@@ -96,5 +96,7 @@ dependencies {
     compileOnly(deobf("mirror:Mariculture-Deluxe-1.7.10:1.3.0-6"))
 
     implementation(deobf("curse.maven:actually-additions-228404:2274681"))// { excludeDeps() }
+
+    implementation("com.github.GTNewHorizons:NotEnoughItems:2.6.1-GTNH:dev")
 
 }
