@@ -80,7 +80,7 @@ public class GenericLens extends Lens implements ILensItem {
             for (EntityItem item : tile.getWorld().getEntitiesWithinAABB(EntityItem.class, AxisAlignedBB.getBoundingBox(hitBlock.getX() - range, hitBlock.getY() - range, hitBlock.getZ() - range, hitBlock.getX() + range, hitBlock.getY() + range, hitBlock.getZ() + range))) {
                 ItemStack stack = item.getEntityItem();
                 if (stack != null) {
-                    for (LensNoneRecipe recipe : ActuallyAdditionsExtension.getRecipesFor(stack, this)) {
+                    for (GenericLensRecipe recipe : ActuallyAdditionsExtension.getRecipesFor(stack, this)) {
                         if (recipe != null && tile.getEnergy() >= recipe.energyUse) {
                             List<ItemStack> outputs = recipe.getOutputs();
                             if (outputs != null && !outputs.isEmpty()) {

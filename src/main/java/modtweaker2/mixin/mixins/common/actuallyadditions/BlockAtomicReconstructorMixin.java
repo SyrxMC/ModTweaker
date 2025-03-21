@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-@Mixin(value = BlockAtomicReconstructor.class, remap = false)
+@Mixin(value = BlockAtomicReconstructor.class)
 public abstract class BlockAtomicReconstructorMixin extends BlockContainerBase {
 
     public BlockAtomicReconstructorMixin(Material material, String name) {
